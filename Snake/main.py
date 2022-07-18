@@ -46,12 +46,12 @@ while not game_over:
             snake.snake_segments[0].xcor() < (-screen.window_width()/2 + 10) or \
             snake.snake_segments[0].ycor() > (screen.window_height()/2 - 10) or \
             snake.snake_segments[0].ycor() < (-screen.window_height()/2 + 10):
-        game_over = True
-        scoreboard.game_over()
+        scoreboard.reset()
+        snake.reset()
 
     for segment in snake.snake_segments[1:]:
         if snake.snake_segments[0].distance(segment) < 10:
-            game_over = True
-            scoreboard.game_over()
+            scoreboard.reset()
+            snake.reset()
 
 screen.exitonclick()

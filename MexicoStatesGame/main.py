@@ -25,6 +25,6 @@ while len(guessed_states) < 32:
         name.penup()
         state_info = states[states.state == answer_state]
         name.goto(int(state_info.x), int(state_info.y))
-        name.write(answer_state, align="center", font=('Courier', 5, 'normal'))t
+        name.write(answer_state, align="center", font=('Courier', 5, 'normal'))
 
 screen.exitonclick()
